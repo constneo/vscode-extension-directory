@@ -1,0 +1,68 @@
+{
+  "name": "vscode-extension-directory",
+  "displayName": "Open Extension Directory",
+  "version": "1.0.0",
+  "publisher": "constneo",
+  "description": "Open extension directory in the explorer.",
+  "type": "module",
+  "author": "constneo",
+  "categories": [
+    "Other"
+  ],
+  "icon": "resources/icon.png",
+  "engines": {
+    "vscode": "^1.99.0"
+  },
+  "main": "extension.cjs",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "scripts": {
+    "dev": "node scripts/build.js",
+    "tsc:watch": "tsc --build --watch"
+  },
+  "license": "LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/constneo/vscode-extension-directory"
+  },
+  "contributes": {
+    "menus": {
+      "commandPalette": [],
+      "extension/context": [
+        {
+          "command": "vscode-extension-directory.open",
+          "group": "navigation",
+          "when": "config.vscode-extension-directory.show"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "vscode-extension-directory.open",
+        "title": "Open Extension Dir",
+        "when": "config.vscode-extension-directory.show"
+      }
+    ],
+    "keybindings": [],
+    "configuration": {
+      "id": "vscode-extension-directory",
+      "type": "object",
+      "title": "Open Extension Directory",
+      "order": 0,
+      "properties": {
+        "vscode-extension-directory.show": {
+          "type": "boolean",
+          "default": false,
+          "description": "Open Extension dir in the  explorer."
+        }
+      }
+    }
+  },
+  "dependencies": {},
+  "extensionDependencies": [],
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@types/vscode": "^1.99.0"
+  }
+}

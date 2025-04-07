@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ESNext",
+    "allowJs": true,
+    "checkJs": true,
+    "lib": ["ESNext", "DOM"],
+    "moduleResolution": "node",
+    "outDir": "out",
+    "sourceMap": false,
+    "strict": true,
+    "baseUrl": ".",
+    "rootDir": "./src",
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "paths": {}
+    // "typeRoots": ["./node_modules/@types/", "./types/"]
+  },
+  "exclude": ["node_modules", "scripts"],
+  "include": ["src", "types"]
+}
