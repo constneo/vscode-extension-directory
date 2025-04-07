@@ -5,14 +5,14 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "ESM test",
+      "name": "Run Extension",
       "type": "extensionHost",
       "request": "launch",
       "internalConsoleOptions": "openOnSessionStart",
       "runtimeExecutable": "${execPath}",
       "args": [
         "--extensionDevelopmentPath=${workspaceFolder}",
-        // "--disable-extensions",
+        "--disable-extensions",
         "${workspaceRoot}/test"
       ],
       "outFiles": ["${workspaceFolder}/dist/**/*.js"]
